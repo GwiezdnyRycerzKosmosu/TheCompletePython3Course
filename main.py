@@ -1,16 +1,28 @@
-# This is a sample Python script.
-
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+def print_something(name, age):
+    print("My name is " + name + " and my age is "+ str(age))
+print_something("Mateusz", 31)
 
+def print_something2(name, age):
+    print("My name is", name, "and my age is", age)
+print_something2("Mateusz", 31)
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
+#def of a function with default values
+def print_something3(name="Someone", age="Unknown"):
+    print("My name is", name, "and my age is", age)
+print_something3("Mateusz")
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+#def of a function with default values, giving keyword argument
+# Note:"none is similar to null in other languages and is a boolean"
+def print_something4(name="Someone", age="Unknown"):
+    print("My name is", name, "and my age is", age)
+print_something4(age = 100)
+print_something4(age = 100, name="Stefan")
+
+#loop and infinitive arguments
+def print_people(*people):
+    for person in people:
+        print("This person is", person)
+
+print_people("NIck", "King", "Shannon", "Geralt", "Henry")
